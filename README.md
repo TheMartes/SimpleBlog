@@ -10,7 +10,7 @@
 
 If you're on **Mac**, you can install PHP and MySQL via [Homebrew](https://brew.sh/)
 
-Linux Distros, can install PHP and MySQL with basically any package manager.
+Linux Distros can install PHP and MySQL with basically any package manager.
 
 ###### Windows
 
@@ -27,8 +27,8 @@ Also you'll need [NodeJS](https://nodejs.org/en/) for compiling JavaScript.
 ```
 $ git clone https://gitlab.com/TheMartes/SimpleBlog
 $ composer install
-$ php artisan key:generate
 $ cp .env_example .env
+$ php artisan key:generate
 ```
 
 #### Then you'll need to compile SASS
