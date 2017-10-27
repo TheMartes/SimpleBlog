@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StorePost;
 use App\Post;
 
 class PostController extends Controller
@@ -10,7 +11,7 @@ class PostController extends Controller
 
     public function __contruct()
     {
-        // $this->middleware('auth')->except('index', 'show');
+        $this->middleware('auth')->except('index', 'show');
     }
 
     public function index()
@@ -36,21 +37,22 @@ class PostController extends Controller
     {
        Post::Create(request(['title', 'slug', 'body']));
 
-       return redirect('/admin');
+       return redirect('/');
     }
 
-    public function update($id)
-    {
-       /*
-        * @todo 
-        *********/
-    }
+    // Make Update Method
 
     public function destroy($id)
     {
-       /*
-        * @todo 
-        *********/
+
+      $post = Post::findOrFail($id);
+      $post->delete();
+
+      $getPosts = Post::get();
+      if(!count($getPost)){
+        Post::truncate();
+      }
+
     }
 
 }
