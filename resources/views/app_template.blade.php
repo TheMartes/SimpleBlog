@@ -16,13 +16,13 @@
         @include('app/partials/header')
     </header>
 
-    <div>
+    <main>
       <div class="column">
 
         @yield('content')
 
       </div>
-    </div>
+    </main>
 
     <footer>
         @include('app/partials/footer')
