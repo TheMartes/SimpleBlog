@@ -1,17 +1,14 @@
-<nav>
-    <div class="hamburger">
-        <a href="#"><img src="{{ resource_path('assets/icons/menu_ico.svg') }}"></a>
+  <div class="landing">
+    <nav>
+      <a href="#"><i class="fa fa-bars"></i></a>
+      <a href="#"><div class="logo">{{ config('app.name')}}</div></a>
+      <a href="#"><i class="fa fa-lock"></i></a>
+    </nav>
+    <div class="content">
+      <h1>UI/UX Design</h1>
+      <p>
+        Lorem Ispum is a choke artist. It chokes! I don't think anybody knows it was Russia that wrote
+        Lorem Ipsum, but I don't know, maybe it was. It could be Russia,
+        but it could also be China. It could also be lots of other people.
     </div>
-    <div class="logo">
-        <a href="#">SimpleBlog</a>
-    </div>
-    <div class="login">
-        <a href="#"><img src="{{ resource_path('assets/icons/lock_ico.svg') }}" alt="lock_ico"></a>
-    </div>
-</nav>
-<div class="banner_article">
-    <h1 class="banner_h">{{ config('app.name')}}</h1>
-    <p class="banner_a">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-</div>
+  </div>
