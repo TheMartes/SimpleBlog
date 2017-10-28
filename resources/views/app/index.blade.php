@@ -3,10 +3,15 @@
 @section('content')
 
     @if(count($posts))
-    
+
         @foreach($posts as $post)
-            {{ $post->title }}
-            {{ $post->body }}
+
+            <div class="article">
+              <div class="title-img"><img src="../image/title-img.jpg" alt="title image"></div>
+              <div class="title"><h4>{{ $post->title }}</h4></div>
+              <div class="author">Written by <strong>Šimon Benčík</strong> on October 17, 2017</div>
+            </div>
+
         @endforeach
 
     @else
