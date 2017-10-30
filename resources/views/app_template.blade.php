@@ -7,9 +7,14 @@
     <title>
             {{ config('app.name') }}
     </title>
+
+    <!-- CSS and JS -->
     <link rel="stylesheet" href="/css/style.css">
+    <source src="/js/app.js">
+
+    <!-- External libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Raleway|Source+Sans+Pro" >
 </head>
 <body>
     <header>
