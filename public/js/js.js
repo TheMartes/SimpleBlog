@@ -67,21 +67,9 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
-module.exports = __webpack_require__(2);
+(function webpackMissingModule() { throw new Error("Cannot find module \"C:\\Users\\TheMartes\\Code\\SimpleBlog\\resources\\assets\\js\""); }());
+(function webpackMissingModule() { throw new Error("Cannot find module \"C:\\Users\\TheMartes\\Code\\SimpleBlog\\resources\\assets\\sass\""); }());
 
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-console.log('Bye bye');
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
