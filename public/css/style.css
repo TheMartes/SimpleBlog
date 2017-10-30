@@ -13,7 +13,7 @@ a {
   background-image: url(/image/limg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25%;
+  height: 400px;
 }
 
 nav {
@@ -83,17 +83,15 @@ nav {
 }
 
 main h1 {
-  margin: 5% auto;
-  opacity: 0.85; }
+  margin: 100px auto;
+  opacity: .85;
+}
 
 .column {
   margin: -2.5% 5% 0 5% !important;
-<<<<<<< HEAD
+  min-height: calc(100vh  - 471px);
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-  min-height: calc(100vh  - 404px);
->>>>>>> master
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -105,7 +103,7 @@ main h1 {
 .article {
   width: 370px;
   height: 379px;
-  margin-bottom: 2.5%;
+  margin-bottom: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
   display: -webkit-box;
@@ -149,10 +147,17 @@ main h1 {
   border: 1px solid #f64f57;
   border-radius: 4px;
   padding: 13px 18px;
-  margin-bottom: 2%;
+  margin-bottom: 20px;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn-more:hover {
+  cursor: pointer;
+  opacity: .85;
 }
 
 footer {

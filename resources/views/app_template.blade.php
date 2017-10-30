@@ -22,6 +22,9 @@
         @yield('content')
 
       </div>
+      <div class="wrap-btn-more">
+        <button name="button" class="btn-more">Show more</button>
+      </div>
     </main>
 
     <footer>
