@@ -24,7 +24,12 @@
     <main>
       <div class="column">
 
-        @yield('content')
+          {{-- Need to design Errors--}}
+          @include('partials.sessions')
+          @include('partials.errors')
+
+
+          @yield('content')
 
       </div>
       <div class="wrap-btn-more">

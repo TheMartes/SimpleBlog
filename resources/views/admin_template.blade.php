@@ -8,11 +8,8 @@
   <body>
 
         {{-- Need to design Errors--}}
-      @if(session('error'))
-
-      <p>{{ Session::get('error') }}</p>
-
-      @endif
+      @include('partials.sessions')
+      @include('partials.errors')
 
         @yield('content')
 
