@@ -1,4 +1,4 @@
-  <div class="landing">
+<div class="landing">
     <nav>
       <a href="#"><i class="fa fa-bars"></i></a>
       <a href="#"><div class="logo">{{ config('app.name')}}</div></a>
@@ -11,4 +11,4 @@
         Lorem Ipsum, but I don't know, maybe it was. It could be Russia,
         but it could also be China. It could also be lots of other people.
     </div>
-  </div>
+</div>

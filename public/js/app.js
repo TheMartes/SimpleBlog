@@ -75,10 +75,7 @@ module.exports = __webpack_require__(2);
 /* 1 */
 /***/ (function(module, exports) {
 
-
-if (window.console && window.console.log) {
-  console.log('hello');
-}
+console.log('hello');
 
 /***/ }),
 /* 2 */

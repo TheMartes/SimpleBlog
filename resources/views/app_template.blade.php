@@ -10,11 +10,11 @@
 
     <!-- CSS and JS -->
     <link rel="stylesheet" href="/css/style.css">
-    <source src="/js/app.js">
+    <script src="/js/app.js"></script>
 
     <!-- External libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Raleway|Source+Sans+Pro" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Raleway|Source+Sans+Pro">
 </head>
 <body>
     <header>
