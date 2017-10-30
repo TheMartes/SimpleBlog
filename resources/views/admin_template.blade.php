@@ -7,7 +7,15 @@
   </head>
   <body>
 
-    @yield('content')
+        {{-- Need to design Errors--}}
+      @if(session('error'))
+
+      <p>{{ Session::get('error') }}</p>
+
+      @endif
+
+        @yield('content')
+
 
   </body>
 </html>
