@@ -19,14 +19,14 @@ class PostController extends Controller
     {
         $posts = Post::get();
 
-        return view('app/index', compact('posts'));
+        return view('app.index', compact('posts'));
     }
 
     public function show($id)
     {
         $post = Post::findOrFail($id);
 
-        return view('app/post', compact('post'));
+        return view('app.post', compact('post'));
     }
 
     public function create()
@@ -41,11 +41,28 @@ class PostController extends Controller
        return redirect('/');
     }
 
-    // Make Update Method
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id);
+
+        return view('admin/post/edit', compact('post'));
+    }
+
+    public function update($id)
+    {
+        $post = findOrFail($id);
+
+        $post->title = request()->input('title');
+        $post->slug  = request()->input('slug');
+        $post->body  = request()->input('body');
+
+        $post->save();
+
+        return redirect('/');
+    }
 
     public function destroy($id)
     {
-
       $post = Post::findOrFail($id);
       $post->delete();
 
@@ -54,6 +71,7 @@ class PostController extends Controller
         Post::truncate();
       }
 
+      return redirect('/');
     }
 
 }
