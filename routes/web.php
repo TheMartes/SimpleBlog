@@ -13,6 +13,9 @@ Route::get('403', 'httpStatusController@403');
 Route::get('/', 'PostController@index');
 Route::get('post/{id}', 'PostController@show');
 
+// User
+Route::get('/a/{name}', 'UserController@show');
+
 // Admin endpoints
 Route::get('/admin', 'AdminController@index');
 
