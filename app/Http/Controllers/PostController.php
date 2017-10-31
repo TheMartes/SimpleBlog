@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StorePost;
 use App\Post;
 use \Carbon\Carbon;
+use Illuminate\Session\Store;
 
 class PostController extends Controller
 {
 
-    public function __contruct()
+    public function __construct()
     {
         $this->middleware('auth')->except('index', 'show');
     }
@@ -36,9 +37,19 @@ class PostController extends Controller
 
     public function store(StorePost $request)
     {
-       Post::Create(request(['title', 'slug', 'body']));
+        $author = auth()->user()->name;
+        $user = request()->input('author');
 
-       return redirect('/');
+        if($author != $user)
+        {
+            return redirect()->back()
+                             ->with('error', 'Whoops something went wrong');
+        }
+        else {
+            Post::Create(request(['title', 'slug', 'author', 'body']));
+
+            return redirect('/');
+        }
     }
 
     public function edit($id)
@@ -67,7 +78,7 @@ class PostController extends Controller
       $post->delete();
 
       $getPosts = Post::get();
-      if(!count($getPost)){
+      if(!count($getPosts)){
         Post::truncate();
       }
 

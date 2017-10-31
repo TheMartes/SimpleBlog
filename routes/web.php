@@ -4,6 +4,9 @@
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+// HTTP Statuses
+Route::get('403', 'httpStatusController@403');
+
 // App endpoints
 
 // Post
