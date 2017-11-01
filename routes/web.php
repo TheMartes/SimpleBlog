@@ -4,17 +4,15 @@
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-// HTTP Statuses
-Route::get('403', 'httpStatusController@403');
-
 // App endpoints
 
 // Post
 Route::get('/', 'PostController@index');
-Route::get('post/{id}', 'PostController@show');
+Route::get('{slug}', 'PostController@show');
 
 // User
 Route::get('/a/{name}', 'UserController@show');
+Route::get('a/{name}/edit', 'UserController@edit');
 
 // Admin endpoints
 Route::get('/admin', 'AdminController@index');

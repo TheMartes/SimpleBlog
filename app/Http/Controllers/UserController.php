@@ -29,9 +29,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($name)
     {
-        //
+        $getUserId = DB::table('users')->where('name', $name)->value('id');
+        $user = User::findOrFail($getUserId);
+
+        return view('admin.user.edit');
     }
 
     /**

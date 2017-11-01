@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StorePost;
 use App\Post;
 use \Carbon\Carbon;
+use DB;
 use Illuminate\Session\Store;
 
 class PostController extends Controller
@@ -23,9 +24,10 @@ class PostController extends Controller
         return view('app.index', compact('posts'));
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $post = Post::findOrFail($id);
+        $getPostId = DB::table('posts')->where('slug', $slug)->value('id');
+        $post = Post::findOrFail($getPostId);
 
         return view('app.post', compact('post'));
     }
@@ -42,12 +44,11 @@ class PostController extends Controller
 
         if($author != $user)
         {
-            return redirect()->back()
-                             ->with('error', 'Whoops something went wrong');
-        }
-        else {
-            Post::Create(request(['title', 'slug', 'author', 'body']));
+            return back()->withInput()
+                         ->with('error', 'Whoops something went wrong');
 
+         } else {
+            Post::Create(request(['title', 'slug', 'author', 'body']));
             return redirect('/');
         }
     }
