@@ -20,6 +20,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
     // Admin
     Route::get('/admin', 'Admin\AdminController@index');
+    Route::get('/admin/settings', 'Admin\AdminController@settings');
+    Route::put('/admin/settings/update', 'Admin\AdminController@settingsUpdate');
 
     // Users
     Route::get('admin/user', 'UserController@list');
