@@ -26,9 +26,7 @@ class PostController extends Controller
 
     public function show($slug)
     {
-        $getPostId = DB::table('posts')->where('slug', $slug)->value('id');
-        $post = Post::findOrFail($getPostId);
-
+        $post = Post::where('slug', '=', $slug)->firstOrFail();
         return view('app.post', compact('post'));
     }
 
@@ -47,7 +45,7 @@ class PostController extends Controller
             return back()->withInput()
                          ->with('error', 'Whoops something went wrong');
 
-         } else {
+        } else {
             Post::Create(request(['title', 'slug', 'author', 'body']));
             return redirect('/');
         }
