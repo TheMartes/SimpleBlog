@@ -2,7 +2,6 @@
 
 // Auth
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 
 // Public
 
@@ -14,12 +13,12 @@ Route::get('/home', 'HomeController@index')->name('home');
     Route::get('profile', 'UserController@index');
     Route::get('profile/edit', 'UserController@edit');
     Route::put('profile/update', 'UserController@update');
-    Route::get('{user}', 'UserController@show');
+    Route::get('/u/{user}', 'UserController@show');
 
 // Admin
 
     // Admin
-    Route::get('/admin', 'Admin\AdminController@index');
+    Route::get('/admin', 'Admin\AdminController@dashboard');
     Route::get('/admin/settings', 'Admin\AdminController@settings');
     Route::put('/admin/settings/update', 'Admin\AdminController@settingsUpdate');
 
@@ -30,6 +29,7 @@ Route::get('/home', 'HomeController@index')->name('home');
     Route::delete('admin/user/delete', 'UserController@destroy');
 
     //Post
+    Route::get('/admin/post', 'Admin\AdminController@Posts');
     Route::get('/admin/post/create', 'PostController@create');
     Route::post('/admin/post/validate', 'PostController@store');
     Route::get('/admin/post/edit', 'PostController@edit');
