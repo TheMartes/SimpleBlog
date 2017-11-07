@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600|Source+Sans+Pro&subset=latin-ext);@charset "UTF-8";
-
-body {
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600|Source+Sans+Pro&subset=latin-ext);body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,24 +11,44 @@ body {
   margin: 0;
 }
 
-Táto stránka sa zatiaľ pripravuje {
-  width: 13%;
+a {
+  top: 23%;
+  left: 23%;
+  position: relative;
+  font-size: 1.125em;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Source Sans Pro';
+}
+
+.admin-nav {
+  width: 250px;
   height: 100vh;
   background: #191919;
   position: absolute;
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-Táto stránka sa zatiaľ pripravuje h2 {
-  margin-left: 21.6%;
+.admin-nav h2 {
   font-size: 1.5em;
   font-weight: 600;
   font-family: 'Raleway';
   color: #475ffc;
 }
 
-Táto stránka sa zatiaľ pripravuje ul {
+.admin-nav ul {
+  width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,23 +61,22 @@ Táto stránka sa zatiaľ pripravuje ul {
   margin: 0;
 }
 
-Táto stránka sa zatiaľ pripravuje ul li {
-  width: 100%;
-  height: 4.6%;
+.admin-nav ul li {
+  height: 50px;
 }
 
-Táto stránka sa zatiaľ pripravuje ul li a {
-  display: block;
+.admin-nav ul li:hover {
+  border-left: 4px solid #475ffc;
+  background-color: #161616;
+}
+
+.admin-nav ul li:hover a {
+  top: 23%;
+  left: 23%;
   position: relative;
   font-size: 1.125em;
-  top: 26%;
-  border-left: 2.4% solid #191919;
   color: #fff;
   text-decoration: none;
   font-family: 'Source Sans Pro';
-}
-
-Táto stránka sa zatiaľ pripravuje ul li a:hover {
-  border-left: 2.4% solid #475ffc;
 }
 
