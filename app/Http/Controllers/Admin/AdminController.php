@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Settings;
+use App\Post;
 use App\Http\Requests\UpdateSettings;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,6 +19,12 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin/dashboard');
+    }
+
+    public function posts()
+    {
+        $posts = Post::get();
+        return view('admin.post.index', compact('posts'));
     }
 
     public function settings()

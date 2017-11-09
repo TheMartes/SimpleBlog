@@ -76,7 +76,28 @@ module.exports = __webpack_require__(3);
 /* 1 */
 /***/ (function(module, exports) {
 
-console.log('Bye bye');
+// instanciate new modal
+var modal = new tingle.modal({
+    footer: true,
+    stickyFooter: false,
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: "Close",
+    cssClass: ['custom-class-1', 'custom-class-2'],
+    onOpen: function onOpen() {
+        console.log('modal open');
+    },
+    onClose: function onClose() {
+        console.log('modal closed');
+    },
+    beforeClose: function beforeClose() {
+        // here's goes some logic
+        // e.g. save content before closing the modal
+        return true; // close the modal
+    }
+});
+
+modal.setContent("<h1>here's some content</h1>");
+modal.open();
 
 /***/ }),
 /* 2 */

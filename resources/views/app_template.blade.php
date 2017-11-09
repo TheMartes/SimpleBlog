@@ -11,12 +11,13 @@
     <!-- CSS and JS -->
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/app.js"></script>
+    <script src="/js/bootbox.js"></script>
 
     <!-- External libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Raleway|Source+Sans+Pro">
 </head>
-<body>
+<body  class="tingle-enabled">
     <header>
         @include('app/partials/header')
     </header>

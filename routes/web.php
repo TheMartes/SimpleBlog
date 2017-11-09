@@ -29,7 +29,7 @@ Auth::routes();
     Route::delete('admin/user/delete', 'UserController@destroy');
 
     //Post
-    Route::get('/admin/post', 'Admin\AdminController@Posts');
+    Route::get('/admin/post', 'Admin\AdminController@posts');
     Route::get('/admin/post/create', 'PostController@create');
     Route::post('/admin/post/validate', 'PostController@store');
     Route::get('/admin/post/edit', 'PostController@edit');

@@ -16,6 +16,7 @@
               <li><a href="#">SEO</a></li>
               <li><a href="#">Plugins</a></li>
               <li><a href="#">Themes</a></li>
+              <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
           </ul>
       </nav>
 
@@ -23,8 +24,10 @@
       @include('partials.sessions')
       @include('partials.errors')
 
+      <main class="base">
         @yield('content')
+      </main>
 
-
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
   </body>
 </html>

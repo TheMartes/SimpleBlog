@@ -51,16 +51,16 @@ class PostController extends Controller
         }
     }
 
-    public function edit($id)
+    public function edit($slug)
     {
-        $post = Post::findOrFail($id);
+        $post = Post::where('slug', '=', $slug);
 
         return view('admin/post/edit', compact('post'));
     }
 
     public function update($id)
     {
-        $post = findOrFail($id);
+        $post = Post::findOrFail($id);
 
         $post->title = request()->input('title');
         $post->slug  = request()->input('slug');
